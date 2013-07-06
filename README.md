@@ -1,3 +1,1 @@
-this is my website
-
-blah blah blah
+This is my website.
