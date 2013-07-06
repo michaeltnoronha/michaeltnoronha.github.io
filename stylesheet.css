@@ -1,4 +1,4 @@
- body, html{
+     body, html{
         margin:0;
     }
     header{
@@ -31,4 +31,24 @@
     .navigation{
         list-style-type: none;
     }
-    
+    .nav{
+        display:inline-block;
+        width:100px;
+    }
+    .navwai{
+        z-index: 10;
+        padding-left: 200px;
+        width:300px;
+   }
+    .navwihl{
+        z-index: 10;
+        padding-left: 250px;
+    }
+    .navinterests{
+        z-index: 10;
+        padding-left: 300px;
+    }
+    .navgoals{
+        z-index: 10;
+        padding-left:350px;
+    }
