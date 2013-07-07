@@ -110,11 +110,14 @@
         height: 100%;
         width: 100%;
         top:200%;
+        background:url("https://raw.github.com/michaeltnoronha/michaeltnoronha.github.io/master/piano.JPG");
     }
     .goals{
         height:100%;
         width: 100%;
         top:300%;
+        background:url('https://raw.github.com/michaeltnoronha/michaeltnoronha.github.io/master/culverimg.JPG');
+        background-size: 100%;
     }
     .contact{
         height:100%;
@@ -126,10 +129,15 @@
         position: absolute;
     }
     .waitext{
-        height:300px;
+        height:250px;
         width:800px;
-        left:30%;
+        left:24%;
         top:40%;
+    }
+    .waitext p{
+        color:white;
+        font-family: impact;
+        font-size: 36px;
     }
     h2{
         border-bottom: 1px solid white;
@@ -139,26 +147,61 @@
     .wihltext{
         height:250px;
         width: 800px;
-        left:30%;
-        top:50%;
+        left:24%;
+        top:40%;
         border:1px solid black;
         background-color: rgba(0,0,0,0.8);
-        font-size: 20px;
-        font-family:"Trebuchet MS", sans-serif, Arial;
     }
     .wihltext ul{
         list-style-type: square;
         color:white;
+        font-size: 20px;
+        font-family:sans-serif, Arial;
     }
     .intereststext{
-        height: 200px;
+        height: 300px;
         width: 600px;
+        border:1px solid white;
+        left:24%;
+        top:37.5%;
+        background-color:rgba(0,0,0,0.8);
+    }
+    .intereststext ul li{
+        color:white;
+        font-family:sans-serif, Arial;
+        font-size: 20px;
+        padding-top: 20px;
     }
     .goalstext{
         height: 200px;
         width: 600px;
+        left:24%;
+        top:37.5%;
+    }
+    .goalstext ul{
+        list-style-type: square;
+        border:1px solid white;
+    }
+    .goalstext ul li{
+        color:white;
     }
     .wihltext p{
         font-family: garamond;
         font-size: 40px;
+    }
+    .wihlli{
+        padding-top: 25px;
+    }
+    .intereststext ul{
+        list-style-type: square;
+    }
+    .intereststext p{
+        color:white;
+    }
+    .intereststext form{
+        color:white;
+        padding-left: 100px;
+    }
+    .intereststext ul li:nth-child(4){
+        padding-bottom: 20px;
     }
