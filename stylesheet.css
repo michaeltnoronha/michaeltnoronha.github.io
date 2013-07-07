@@ -1,8 +1,7 @@
-     body, html{
-        margin:0;
-    }
     * {
         z-index:0;
+        margin:0px;
+        border: 1px solid red;
     }
     header{
         font-size: 40px;
@@ -44,7 +43,6 @@
     .nav{
         display:inline;
         z-index:5;
-        /*width:100px;*/
     }
     .navwai{
         z-index: 10;
@@ -62,4 +60,60 @@
     .navgoals{
         z-index: 10;
         padding-left: 100px;
+    }
+    .maincontentdiv{
+        height:100%;
+        position:absolute;
+        width:100%;
+        left:0%;
+    }
+    .wai{
+        height:100%;
+        width: 100%;
+        top:0%;
+    }
+    .wihl{
+        height:100%;
+        width:100%;
+        border:2px solid blue;
+        top:100%;
+    }
+    .interests{
+        height: 100%;
+        width: 100%;
+        top:200%;
+    }
+    .goals{
+        height:100%;
+        width: 100%;
+        top:300%;
+    }
+    .contact{
+        height:100%;
+        width: 100%;
+        top:400%;
+    }
+    .maintext{
+        position: absolute;
+    }
+    .waitext{
+        height:200px;
+        width:600px;
+        left:30%;
+        top:40%;
+    }
+    .wihltext{
+        height:200px;
+        width: 600px;
+    }
+    .intereststext{
+        height: 200px;
+        width: 600px;
+    }
+    .goalstext{
+        height: 200px;
+        width: 600px;
+    }
+    .maincontentdiv{
+        border:4px dashed yellow;
     }
