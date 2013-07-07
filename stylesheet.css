@@ -5,7 +5,7 @@
     header{
         font-size: 40px;
         text-align: left;
-        background-color: rgba(44, 55, 71, 0.9);
+        background-color: rgba(44, 55, 71, 0.7);
         padding:20px;
         color:white;
         position:fixed;
@@ -34,47 +34,53 @@
         margin-left:230px;
         padding-top:30px;
     }
-    .navdiv {
-        float:right;
-    }
     .nav{
-        display:inline;
+        display:inline-block;
         z-index:5;
         position:fixed;
         clear:both;
     }
     .navwai{
         z-index: 10;
-        padding-left: 100px;
-        width:300px;
+        top:7.5%;
+        left:20%;
+        position:fixed;        
    }
    .navwai:hover{
         color:white;
    }
     .navwihl{
         z-index: 10;
-        padding-left: 300px;
+        top:7.5%;
+        left:35%;
+        position:fixed;
     }
     .navwihl:hover{
         color:white;    
     }
     .navinterests{
         z-index: 10;
-        padding-left: 500px;
+        top:7.5%;
+        left:50%;
+        position: fixed;
     }
     .navinterests:hover{
         color:white;
     }
     .navgoals{
         z-index: 10;
-        padding-left: 700px;
+        top:7.5%;
+        left:65%;
+        position:fixed;
    }
    .navgoals:hover{
         color:white;
    }
    .navcontact{
         z-index: 10;
-        padding-left: 900px;
+        top:7.5%;
+        left:80%;
+        position:fixed;
    }
    .navcontact:hover{
         color:white;
