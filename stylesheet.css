@@ -3,17 +3,20 @@
 * {
     z-index:0;
     margin:0px;
+    /*border:1px solid red;*/
 }
 
 h2{
     border-bottom: 1px solid white;
     color:white;
     font-family: impact;
+    font-family: 'Denk One', sans-serif;
 }
 
 .main_parameter{
     height:400%;
     min-width:960px;
+    border:2px dashed blue;
 }
 
 a{
@@ -120,16 +123,6 @@ header{
     left:0%;
 }
 
-
-
-
-
-
-
-
-
-
-
 .maintext{
     position: absolute;
 }
@@ -166,6 +159,7 @@ header{
     background:url("https://raw.github.com/michaeltnoronha/michaeltnoronha.github.io/master/map.jpg");
     background-size: 100%;
     margin:0 auto;
+    background-attachment:fixed !important;
 }
 
 .wihltext{
@@ -206,7 +200,8 @@ header{
     width: 100%;
     top:300%;
     background:url('https://raw.github.com/michaeltnoronha/michaeltnoronha.github.io/master/culverimg.JPG');
-    background-size: 100% !important;  
+    background-size: 100%;
+    background-attachment: fixed !important;
 }
 
 .goalstext{
@@ -221,6 +216,7 @@ header{
 .goalstext h2{
     color:#white;
     border-bottom:1px solid white;
+    font-family: 'Denk One', sans-serif;
 }
 
 .goalstext ul{
@@ -290,16 +286,16 @@ header{
 .contact h2{
     position:absolute;
     top:30%;
-    left:0%;
+    left:10%;
     border:none;
     font-size: 40px;
+    font-family: 'Denk One', sans-serif;
 }
 
 .contact a{
     position:absolute;
     top:80%;
     left:15%;
-    border:1px solid #2c3747;
     background-color: #2c3747;
     border-radius:5px;
     text-decoration: none;
