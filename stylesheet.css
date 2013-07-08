@@ -184,12 +184,12 @@
         width: 600px;
         left:24%;
         top:37.5%;
-        border:1px solid black;
+        border:1px solid white;
         background-color: rgba(0,0,0,0.8);
     }
     .goalstext h2{
-        color:#9e9e9e;
-        border-bottom:1px solid black;
+        color:#white;
+        border-bottom:1px solid white;
     }
     .goalstext ul{
         list-style-type: square;
@@ -197,7 +197,7 @@
         font-family: sans-serif;
     }
     .goalstext ul li{
-        color:#9e9e9e;
+        color:white;
         padding-bottom: 20px;
     }
     .intereststext ul{
@@ -217,36 +217,47 @@
         height:100%;
         width:100%;
     }
-    .contacttext{
-        height:250px;
-        width:800px;
+    .contact{
+        height:100%;
+        width:100%;
     }
-    .contacttext h2{
+    .contact h2{
         position:absolute;
-        top:60%;
+        top:30%;
         left:0%;
         border:none;
         font-size: 40px;
    }
-   .contacttext a{
+   .contact a{
         position:absolute;
-        top:200%;
-        left:25%;
+        top:80%;
+        left:15%;
         border:1px solid #2c3747;
         background-color: #2c3747;
         border-radius:5px;
         text-decoration: none;
         font-weight: bold;
-        padding:5px 0;
    }
-   .contacttext p{
+    .contact p{
         position:absolute;
-        top:200%;
-        left:75%;
+        top:80%;
+        left:70%;
         border:1px solid #2c3747;
         background-color: #2c3747;
         border-radius:5px;
         font-weight: bold;
-        padding:5px 0;
-        color:white;
+        padding:10px 0;
+   }
+    .gitbutton{
+        position:absolute;
+        left:40%;
+        top:80%%;
+        border:1px solid #2c3747;
+        background-color: #2c3747;
+        border-radius: 5px;
+        font-weight: bold;
+        width:400px;
+    }
+   img{
+        height:20px;
    }
