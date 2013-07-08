@@ -226,7 +226,7 @@ header{
 }
 
 .goalstext h2{
-    color:#white;
+    color:white;
     border-bottom:1px solid white;
     font-family: 'Denk One', sans-serif;
 }
@@ -327,7 +327,7 @@ header{
 .gitbutton{
     position:absolute;
     left:40%;
-    top:80%%;
+    top:80%;
     background-color: #2c3747;
     border-radius: 5px;
     font-weight: bold;
