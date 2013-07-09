@@ -4,12 +4,12 @@
     z-index:0;
     margin:0px;
     /*border:1px solid red;*/
-    max-width: 100%;
     vertical-align: baseline;
 }
 
 body{
     min-width: 588px;
+    max-width: 1300px;
 }
 
 h2{
