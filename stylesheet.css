@@ -24,6 +24,8 @@ section{
     width:800px;
     margin:auto 0;
     background-color: inherit;
+    max-width: 960px;
+    min-width: 588px;
 }
 
 a{
