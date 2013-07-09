@@ -5,6 +5,11 @@
     margin:0px;
     /*border:1px solid red;*/
     max-width: 100%;
+    vertical-align: baseline;
+}
+
+body{
+    min-width: 588px;
 }
 
 h2{
