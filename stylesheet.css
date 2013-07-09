@@ -15,9 +15,10 @@ h2{
 }
 
 section{
-    height:400%;
+    height: 400%;
     width:800px;
     margin:auto 0;
+    background-color: inherit;
 }
 
 a{
@@ -145,6 +146,7 @@ header{
     height: 175px;
     top:70%;
     right:5%;
+    max-width: 100%;
 }
 
 .waitext{
