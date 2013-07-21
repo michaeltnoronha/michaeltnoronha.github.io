@@ -73,6 +73,7 @@ header{
     z-index:5;
     position:fixed;
     clear:both;
+    font-family: sans-serif;
 }
 
 .navwai{
@@ -136,8 +137,6 @@ header{
     width:100%;
     left:0%;
 }
-
-
 
 /*WHO AM I (wai)*/
 
