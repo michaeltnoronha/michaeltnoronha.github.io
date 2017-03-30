@@ -113,11 +113,15 @@
 
 <p>To initialize our ncurses session, we first call <code>initscr()</code>. There are also a few functions we call at the start our program in order to define basic behaviors:</p>
 
-<p><code>cbreak()</code> &ndash; Disables line buffering and also allows us to process control sequences (eg. CTRL^C).
-<code>noecho()</code> &ndash; Turns off input echoing, as its name suggests :). This means that the keys you press will not be printed on the screen like they normally are when you type into the terminal.
-<code>keypad(stdscr,TRUE)</code> &ndash; Allows us to enable processing of additional keys like the function keys and more importantly, the arrow keys (unless you like to play snake with WASD or something, I guess). Note the first argument, <code>stdscr</code> can be varied if we want to do the same thing for windows, which I&rsquo;ll talk about soon.
-<code>curs_set(0)</code> &ndash; Hides the cursor, which we wouldn&rsquo;t want distracting from our beautifully designed game ;)
-<code>halfdelay()</code> &ndash;  Sets an upper bound on the amount of time the program waits for input (after which it returns ERR). Sounds useful, right?</p>
+<p><code>cbreak()</code> &ndash; Disables line buffering and also allows us to process control sequences (eg. CTRL^C)</p>
+
+<p><code>noecho()</code> &ndash; Turns off input echoing, as its name suggests :). This means that the keys you press will not be printed on the screen like they normally are when you type into the terminal</p>
+
+<p><code>keypad(stdscr,TRUE)</code> &ndash; Allows us to enable processing of additional keys like the function keys and more importantly, the arrow keys (unless you like to play snake with WASD or something, I guess). Note the first argument, <code>stdscr</code> can be varied if we want to do the same thing for windows, which I&rsquo;ll talk about soon</p>
+
+<p><code>curs_set(0)</code> &ndash; Hides the cursor, which we wouldn&rsquo;t want distracting from our beautifully designed game ;)</p>
+
+<p><code>halfdelay()</code> &ndash;  Sets an upper bound on the amount of time the program waits for input (after which it returns ERR). Sounds useful, right?</p>
 
 <h2 id="output-and-input">Output and Input</h2>
 
@@ -125,15 +129,19 @@
 
 <h3 id="our-output-functions">Our Output Functions</h3>
 
-<p><code>move(y,x)</code> &ndash; Allows us to move the cursor to a specified location on the screen. Note that if we hide the cursor (call <code>curs_set(0)</code>), this doesn&rsquo;t produce any externally-observable change.
-<code>addch(ch | ATTRIBUTES)</code> &ndash; Adds a character at the current location of the cursor. Note that we can OR <a href="http://www.tldp.org/HOWTO/NCURSES-Programming-HOWTO/attrib.html">attributes</a>.
-<code>mvaddch(y, x, ch)</code> &ndash; A composition of the prior two functions.
-<code>printw(str)</code> &ndash; The <code>printf</code> of ncurses.
-<code>mvprintw(y, x, str)</code> &ndash; Similar to <code>mvaddch</code>, a composition of <code>move</code> and <code>printw</code>.</p>
+<p><code>move(y,x)</code> &ndash; Allows us to move the cursor to a specified location on the screen. Note that if we hide the cursor (call <code>curs_set(0)</code>), this doesn&rsquo;t produce any externally-observable change</p>
+
+<p><code>addch(ch | ATTRIBUTES)</code> &ndash; Adds a character at the current location of the cursor. Note that we can OR <a href="http://www.tldp.org/HOWTO/NCURSES-Programming-HOWTO/attrib.html">attributes</a></p>
+
+<p><code>mvaddch(y, x, ch)</code> &ndash; A composition of the prior two functions</p>
+
+<p><code>printw(str)</code> &ndash; The <code>printf</code> of ncurses</p>
+
+<p><code>mvprintw(y, x, str)</code> &ndash; Similar to <code>mvaddch</code>, a composition of <code>move</code> and <code>printw</code></p>
 
 <h3 id="our-input-functions">Our Input Functions</h3>
 
-<p><code>getch()</code> &ndash; Reads a character from the terminal. Note that unless <code>cbreak</code> or <code>raw</code> are called, input will be newline-buffered.</p>
+<p><code>getch()</code> &ndash; Reads a character from the terminal. Note that unless <code>cbreak</code> or <code>raw</code> are called, input will be newline-buffered</p>
 
 <p>And actually, that&rsquo;s the only one! There are certainly others with fairly self-explanatory names, such as <code>scanw</code>, but snake is relatively simple and we won&rsquo;t be needing them :).</p>
 
@@ -145,8 +153,9 @@
 
 <p>When we call <code>initscr</code>, we are given a clean canvas to work with &ndash; the entire terminal. Windows allow us to add additional &ldquo;layers&rdquo; to this canvas, which is useful if we want to manage separate parts of the display independently. Example cases would be the game itself or a score display, which we might want to update multiple times per second asynchronously. There are a few special functions, though on the whole windows behave mostly in a similar way to the screen itself:</p>
 
-<p><code>newwin(height, width, starty, startx)</code> &ndash; Initializes a new window at the coordinates <code>(starty,startx)</code> relative to <code>stdscr</code>.
-<code>delwin(win)</code> &ndash; Deletes a window, deallocating its memory</p>
+<p><code>newwin(height, width, starty, startx)</code> &ndash; Initializes a new window at the coordinates <code>(starty,startx)</code> relative to <code>stdscr</code></p>
+
+<p><code>delwin(win)</code> &ndash; Deletes a window, deallocating its memory</p>
 
 <p>Apart from these two functions, windows can mostly be manipulated by functions named after their standard counterparts with a &ldquo;w&rdquo; appended to the start. For example, <code>printw</code> becomes <code>wprintw</code>. The first argument to all these functions is the some window.</p>
 

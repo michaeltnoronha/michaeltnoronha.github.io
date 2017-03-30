@@ -28,11 +28,15 @@
 
 &lt;p&gt;To initialize our ncurses session, we first call &lt;code&gt;initscr()&lt;/code&gt;. There are also a few functions we call at the start our program in order to define basic behaviors:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;cbreak()&lt;/code&gt; &amp;ndash; Disables line buffering and also allows us to process control sequences (eg. CTRL^C).
-&lt;code&gt;noecho()&lt;/code&gt; &amp;ndash; Turns off input echoing, as its name suggests :). This means that the keys you press will not be printed on the screen like they normally are when you type into the terminal.
-&lt;code&gt;keypad(stdscr,TRUE)&lt;/code&gt; &amp;ndash; Allows us to enable processing of additional keys like the function keys and more importantly, the arrow keys (unless you like to play snake with WASD or something, I guess). Note the first argument, &lt;code&gt;stdscr&lt;/code&gt; can be varied if we want to do the same thing for windows, which I&amp;rsquo;ll talk about soon.
-&lt;code&gt;curs_set(0)&lt;/code&gt; &amp;ndash; Hides the cursor, which we wouldn&amp;rsquo;t want distracting from our beautifully designed game ;)
-&lt;code&gt;halfdelay()&lt;/code&gt; &amp;ndash;  Sets an upper bound on the amount of time the program waits for input (after which it returns ERR). Sounds useful, right?&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cbreak()&lt;/code&gt; &amp;ndash; Disables line buffering and also allows us to process control sequences (eg. CTRL^C)&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;noecho()&lt;/code&gt; &amp;ndash; Turns off input echoing, as its name suggests :). This means that the keys you press will not be printed on the screen like they normally are when you type into the terminal&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;keypad(stdscr,TRUE)&lt;/code&gt; &amp;ndash; Allows us to enable processing of additional keys like the function keys and more importantly, the arrow keys (unless you like to play snake with WASD or something, I guess). Note the first argument, &lt;code&gt;stdscr&lt;/code&gt; can be varied if we want to do the same thing for windows, which I&amp;rsquo;ll talk about soon&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;curs_set(0)&lt;/code&gt; &amp;ndash; Hides the cursor, which we wouldn&amp;rsquo;t want distracting from our beautifully designed game ;)&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;halfdelay()&lt;/code&gt; &amp;ndash;  Sets an upper bound on the amount of time the program waits for input (after which it returns ERR). Sounds useful, right?&lt;/p&gt;
 
 &lt;h2 id=&#34;output-and-input&#34;&gt;Output and Input&lt;/h2&gt;
 
@@ -40,15 +44,19 @@
 
 &lt;h3 id=&#34;our-output-functions&#34;&gt;Our Output Functions&lt;/h3&gt;
 
-&lt;p&gt;&lt;code&gt;move(y,x)&lt;/code&gt; &amp;ndash; Allows us to move the cursor to a specified location on the screen. Note that if we hide the cursor (call &lt;code&gt;curs_set(0)&lt;/code&gt;), this doesn&amp;rsquo;t produce any externally-observable change.
-&lt;code&gt;addch(ch | ATTRIBUTES)&lt;/code&gt; &amp;ndash; Adds a character at the current location of the cursor. Note that we can OR &lt;a href=&#34;http://www.tldp.org/HOWTO/NCURSES-Programming-HOWTO/attrib.html&#34;&gt;attributes&lt;/a&gt;.
-&lt;code&gt;mvaddch(y, x, ch)&lt;/code&gt; &amp;ndash; A composition of the prior two functions.
-&lt;code&gt;printw(str)&lt;/code&gt; &amp;ndash; The &lt;code&gt;printf&lt;/code&gt; of ncurses.
-&lt;code&gt;mvprintw(y, x, str)&lt;/code&gt; &amp;ndash; Similar to &lt;code&gt;mvaddch&lt;/code&gt;, a composition of &lt;code&gt;move&lt;/code&gt; and &lt;code&gt;printw&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;move(y,x)&lt;/code&gt; &amp;ndash; Allows us to move the cursor to a specified location on the screen. Note that if we hide the cursor (call &lt;code&gt;curs_set(0)&lt;/code&gt;), this doesn&amp;rsquo;t produce any externally-observable change&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;addch(ch | ATTRIBUTES)&lt;/code&gt; &amp;ndash; Adds a character at the current location of the cursor. Note that we can OR &lt;a href=&#34;http://www.tldp.org/HOWTO/NCURSES-Programming-HOWTO/attrib.html&#34;&gt;attributes&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;mvaddch(y, x, ch)&lt;/code&gt; &amp;ndash; A composition of the prior two functions&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;printw(str)&lt;/code&gt; &amp;ndash; The &lt;code&gt;printf&lt;/code&gt; of ncurses&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;mvprintw(y, x, str)&lt;/code&gt; &amp;ndash; Similar to &lt;code&gt;mvaddch&lt;/code&gt;, a composition of &lt;code&gt;move&lt;/code&gt; and &lt;code&gt;printw&lt;/code&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;our-input-functions&#34;&gt;Our Input Functions&lt;/h3&gt;
 
-&lt;p&gt;&lt;code&gt;getch()&lt;/code&gt; &amp;ndash; Reads a character from the terminal. Note that unless &lt;code&gt;cbreak&lt;/code&gt; or &lt;code&gt;raw&lt;/code&gt; are called, input will be newline-buffered.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;getch()&lt;/code&gt; &amp;ndash; Reads a character from the terminal. Note that unless &lt;code&gt;cbreak&lt;/code&gt; or &lt;code&gt;raw&lt;/code&gt; are called, input will be newline-buffered&lt;/p&gt;
 
 &lt;p&gt;And actually, that&amp;rsquo;s the only one! There are certainly others with fairly self-explanatory names, such as &lt;code&gt;scanw&lt;/code&gt;, but snake is relatively simple and we won&amp;rsquo;t be needing them :).&lt;/p&gt;
 
@@ -60,8 +68,9 @@
 
 &lt;p&gt;When we call &lt;code&gt;initscr&lt;/code&gt;, we are given a clean canvas to work with &amp;ndash; the entire terminal. Windows allow us to add additional &amp;ldquo;layers&amp;rdquo; to this canvas, which is useful if we want to manage separate parts of the display independently. Example cases would be the game itself or a score display, which we might want to update multiple times per second asynchronously. There are a few special functions, though on the whole windows behave mostly in a similar way to the screen itself:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;newwin(height, width, starty, startx)&lt;/code&gt; &amp;ndash; Initializes a new window at the coordinates &lt;code&gt;(starty,startx)&lt;/code&gt; relative to &lt;code&gt;stdscr&lt;/code&gt;.
-&lt;code&gt;delwin(win)&lt;/code&gt; &amp;ndash; Deletes a window, deallocating its memory&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;newwin(height, width, starty, startx)&lt;/code&gt; &amp;ndash; Initializes a new window at the coordinates &lt;code&gt;(starty,startx)&lt;/code&gt; relative to &lt;code&gt;stdscr&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;delwin(win)&lt;/code&gt; &amp;ndash; Deletes a window, deallocating its memory&lt;/p&gt;
 
 &lt;p&gt;Apart from these two functions, windows can mostly be manipulated by functions named after their standard counterparts with a &amp;ldquo;w&amp;rdquo; appended to the start. For example, &lt;code&gt;printw&lt;/code&gt; becomes &lt;code&gt;wprintw&lt;/code&gt;. The first argument to all these functions is the some window.&lt;/p&gt;
 
