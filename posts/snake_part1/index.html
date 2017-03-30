@@ -11,7 +11,7 @@
 <meta name="description" content="Blog and personal website">
 
 
-<meta property="twitter:title" content="Snake with GNU ncurese! -- Part I, ncurses basics">
+<meta property="twitter:title" content="Snake with GNU ncurses! -- Part I, ncurses basics">
 
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:image" content="https://mtn.github.io/img/banner.png">
@@ -21,7 +21,7 @@
 <title>
 
 
-     mtn - Snake with GNU ncurese! -- Part I, ncurses basics 
+     mtn - Snake with GNU ncurses! -- Part I, ncurses basics 
 
 </title>
 <link rel="canonical" href="https://mtn.github.io/posts/snake_part1/">
@@ -94,7 +94,7 @@
         <div class="content">
             <div class="page-heading">
 
-    Snake with GNU ncurese! -- Part I, ncurses basics
+    Snake with GNU ncurses! -- Part I, ncurses basics
 
 </div>
 
@@ -103,7 +103,7 @@
     
     
 
-<p>As my first game, I made snake in C using the graphics library ncurses! There are probably several dozen other languages that would have also sufficed or been better but I chose C because I picked it up pretty recently, so making a project from scratch was a decent challenge. Over two posts, I&rsquo;ll walk through some of the process, including decisions I made along the way and the rationale behind them. In this one, I&rsquo;ll set up the basic features of ncurses that I found useful.</p>
+<p>As my first game, I made snake in C using the graphics library ncurses! There are probably several dozen other languages that would have also sufficed or been better but I chose C because I picked it up pretty recently, so making a project from scratch was a decent challenge. Over two posts, I&rsquo;ll walk through some of the process, including decisions I made along the way and the rationale behind them. In this one, I&rsquo;ll set up the basic features of ncurses that I found useful. What I write should be <em>mostly</em> self-contained, but when included links should clear things up in cases where I&rsquo;m not.</p>
 
 <h1 id="what-s-ncurses">What&rsquo;s ncurses?</h1>
 
@@ -111,15 +111,52 @@
 
 <h2 id="initialization-functions">Initialization Functions</h2>
 
-<p>To initialize our ncurses session, we first call <code>initscr()</code>. There are also a few functions we call at the start our program in order to define basic behaviors. The first is <code>cbreak()</code>, which disables line buffering and also allows us to process control sequences (eg. CTRL^C). The next is <code>noecho()</code>, which turns off input echoing, as its name suggests :). This means that the keys you press will not be printed on the screen like they normally are when you type into the terminal. The next one is <code>keypad()</code>, which allows us to enable processing of additional keys like the function keys and more importantly, the arrow keys (unless you like to play snake with WASD or something, I guess). A minor one Finally, there&rsquo;s halfdelay(), which sets an upper bound on the amount of time the program waits for input (after which it returns ERR). Sounds useful, right?</p>
+<p>To initialize our ncurses session, we first call <code>initscr()</code>. There are also a few functions we call at the start our program in order to define basic behaviors:</p>
+
+<p><code>cbreak()</code> &ndash; Disables line buffering and also allows us to process control sequences (eg. CTRL^C).
+<code>noecho()</code> &ndash; Turns off input echoing, as its name suggests :). This means that the keys you press will not be printed on the screen like they normally are when you type into the terminal.
+<code>keypad(stdscr,TRUE)</code> &ndash; Allows us to enable processing of additional keys like the function keys and more importantly, the arrow keys (unless you like to play snake with WASD or something, I guess). Note the first argument, <code>stdscr</code> can be varied if we want to do the same thing for windows, which I&rsquo;ll talk about soon.
+<code>curs_set(0)</code> &ndash; Hides the cursor, which we wouldn&rsquo;t want distracting from our beautifully designed game ;)
+<code>halfdelay()</code> &ndash;  Sets an upper bound on the amount of time the program waits for input (after which it returns ERR). Sounds useful, right?</p>
 
 <h2 id="output-and-input">Output and Input</h2>
 
 <p>ncurses essentially gives you a grid systems of rows and columns. Within this basic grid, we can do simple things like move around and print characters but, as we&rsquo;ll see, also introduce more additional structures. As with many similar programs, the top left corner of the screen is (0,0) rather than the bottom left as is conventional elsewhere. What is rather more unique is that throughout ncurses where coordinate arguments are used, the &ldquo;y&rdquo; is specified before the &ldquo;x.&rdquo; A few functions!</p>
 
-<p><code>move(int y,int x)</code> &ndash; Allows us to move the cursor to a specified location on the screen. Note that if we hide the cursor (call <code>curs_set(0)</code>), this doesn&rsquo;t produce any externally-observable change</p>
+<h3 id="our-output-functions">Our Output Functions</h3>
+
+<p><code>move(y,x)</code> &ndash; Allows us to move the cursor to a specified location on the screen. Note that if we hide the cursor (call <code>curs_set(0)</code>), this doesn&rsquo;t produce any externally-observable change.
+<code>addch(ch | ATTRIBUTES)</code> &ndash; Adds a character at the current location of the cursor. Note that we can OR <a href="http://www.tldp.org/HOWTO/NCURSES-Programming-HOWTO/attrib.html">attributes</a>.
+<code>mvaddch(y, x, ch)</code> &ndash; A composition of the prior two functions.
+<code>printw(str)</code> &ndash; The <code>printf</code> of ncurses.
+<code>mvprintw(y, x, str)</code> &ndash; Similar to <code>mvaddch</code>, a composition of <code>move</code> and <code>printw</code>.</p>
+
+<h3 id="our-input-functions">Our Input Functions</h3>
+
+<p><code>getch()</code> &ndash; Reads a character from the terminal. Note that unless <code>cbreak</code> or <code>raw</code> are called, input will be newline-buffered.</p>
+
+<p>And actually, that&rsquo;s the only one! There are certainly others with fairly self-explanatory names, such as <code>scanw</code>, but snake is relatively simple and we won&rsquo;t be needing them :).</p>
+
+<h2 id="a-few-others">A Few Others&hellip;</h2>
+
+<p>There are a few other functions that we&rsquo;ll find useful. One of these is <code>getmaxyx(stdscr,y,x)</code>, which allows us to get the dimensions of our current screen (or window, if we alter the first parameter). We can use these numbers to calculate the coordinates we&rsquo;ll render elements of our interface.</p>
 
 <h2 id="windows">Windows</h2>
+
+<p>When we call <code>initscr</code>, we are given a clean canvas to work with &ndash; the entire terminal. Windows allow us to add additional &ldquo;layers&rdquo; to this canvas, which is useful if we want to manage separate parts of the display independently. Example cases would be the game itself or a score display, which we might want to update multiple times per second asynchronously. There are a few special functions, though on the whole windows behave mostly in a similar way to the screen itself:</p>
+
+<p><code>newwin(height, width, starty, startx)</code> &ndash; Initializes a new window at the coordinates <code>(starty,startx)</code> relative to <code>stdscr</code>.
+<code>delwin(win)</code> &ndash; Deletes a window, deallocating its memory</p>
+
+<p>Apart from these two functions, windows can mostly be manipulated by functions named after their standard counterparts with a &ldquo;w&rdquo; appended to the start. For example, <code>printw</code> becomes <code>wprintw</code>. The first argument to all these functions is the some window.</p>
+
+<h2 id="refresh">Refresh</h2>
+
+<p>Congrats! You&rsquo;re well on your way to snake in ncurses. But if you&rsquo;ve tried anything out yet, you&rsquo;ll have realized there&rsquo;s a problem. Maybe you have the wrong version&hellip;? No! I&rsquo;ve just left the most important part for last :). On this last point, it&rsquo;s helpful to think of a virtual screen that exists separately from your physical screen. Changes we make go into effect immediately on the virtual screen &ndash; if we print something to the screen, for example &ndash; but we need to push them onto the physical screen somehow. This is where <code>refresh()</code> comes in (and correspondingly, <code>wrefresh</code>)! Whenever we make a change, we need to <em>refresh</em> our screen in order to see it in real life. When in doubt, check if you&rsquo;ve done this.</p>
+
+<h2 id="that-was-a-long-list">That was a long list&hellip;</h2>
+
+<p>Wow, that was a lot! Don&rsquo;t worry if you can&rsquo;t remember more than a few. As you start to work with ncurses, you&rsquo;ll quickly internalize them. Until then, I hope this will be a good reference. Before moving on, it&rsquo;s worth making a simple program that uses each of the functions above. If you&rsquo;re feeling adventurous, poke around for other functions in the <a href="http://www.tldp.org/HOWTO/NCURSES-Programming-HOWTO/attrib.html">HOWTO</a> and try out some others. Good luck!</p>
 
 
             </div>
