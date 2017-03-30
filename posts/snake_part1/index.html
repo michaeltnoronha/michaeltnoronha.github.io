@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Blog and personal website">
+
+
+<meta property="twitter:title" content="Snake with GNU ncurese! -- Part I, ncurses basics">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://mtn.github.io/img/banner.png">
+
+<meta property="twitter:description" content="">
+
+<title>
+
+
+     mtn - Snake with GNU ncurese! -- Part I, ncurses basics 
+
+</title>
+<link rel="canonical" href="https://mtn.github.io/posts/snake_part1/">
+
+
+<link rel="stylesheet" href="https://mtn.github.io/css/main.v0.9.1.css">
+<link rel="stylesheet" href="https://mtn.github.io/css/ionicons.min.css">
+
+
+  <link rel="stylesheet" href="https://mtn.github.io/css/highlight.min.css">
+
+
+
+  <link rel="stylesheet" href="https://mtn.github.io/css/progressively.min.css">
+
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://mtn.github.io/img/logo.png"
+
+>
+
+
+
+
+</head>
+
+
+<body>
+
+
+<section class="header">
+
+    <div class="container">
+        <a href="https://mtn.github.io/"><img class="logo" src="https://mtn.github.io/img/logo.png" alt="logo" /></a>
+        <div class="content">
+            <a href="https://mtn.github.io/"><div class="name"><h1>mtn</h1></div></a>
+            <nav>
+                <ul>
+                    
+                    
+                        
+                    
+                        
+                            
+                            <a href="https://mtn.github.io/posts"><li>posts</li></a>
+                            
+                        
+                    
+                    
+                        
+                            <a href="https://mtn.github.io/projects/"><li>projects</li></a>
+                        
+                    
+                        
+                            <a href="https://mtn.github.io/about/"><li>about</li></a>
+                        
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="main">
+    <div class="container">
+        <div class="content">
+            <div class="page-heading">
+
+    Snake with GNU ncurese! -- Part I, ncurses basics
+
+</div>
+
+            <div class="markdown">
+                
+    
+    
+
+<p>As my first game, I made snake in C using the graphics library ncurses! There are probably several dozen other languages that would have also sufficed or been better but I chose C because I picked it up pretty recently, so making a project from scratch was a decent challenge. Over two posts, I&rsquo;ll walk through some of the process, including decisions I made along the way and the rationale behind them. In this one, I&rsquo;ll set up the basic features of ncurses that I found useful.</p>
+
+<h1 id="what-s-ncurses">What&rsquo;s ncurses?</h1>
+
+<p>ncurses is probably the easiest graphics library to get started with (not that I have much other experience yet), and is very well documented <a href="http://tldp.org/HOWTO/NCURSES-Programming-HOWTO/">here</a>. It came about as a successor to curses, a wrapper over terminal graphics functionality that allows us to render pretty things on different terminals without working with messy raw values. To the best of my knowledge, the necessary header is included with the Xcode developer tools for MacOS, and is available through <code>apt-get</code> (or your default package manager) on linux. To make something simple like snake, there are only a few key concepts you need to wrap your mind around. Starting simple is good; I first stumbled on ncurses after googling &ldquo;C terminal graphics&rdquo; when working on a (not-yet-finished) Conway&rsquo;s Game of Life simulator, and felt I was making too many decisions because I wanted to progress in the project without getting a feel for the full library. There&rsquo;s lots more, though, which I&rsquo;ll definitely be exploring in the future and you should check out after reading this post too!</p>
+
+<h2 id="initialization-functions">Initialization Functions</h2>
+
+<p>To initialize our ncurses session, we first call <code>initscr()</code>. There are also a few functions we call at the start our program in order to define basic behaviors. The first is <code>cbreak()</code>, which disables line buffering and also allows us to process control sequences (eg. CTRL^C). The next is <code>noecho()</code>, which turns off input echoing, as its name suggests :). This means that the keys you press will not be printed on the screen like they normally are when you type into the terminal. The next one is <code>keypad()</code>, which allows us to enable processing of additional keys like the function keys and more importantly, the arrow keys (unless you like to play snake with WASD or something, I guess). A minor one Finally, there&rsquo;s halfdelay(), which sets an upper bound on the amount of time the program waits for input (after which it returns ERR). Sounds useful, right?</p>
+
+<h2 id="output-and-input">Output and Input</h2>
+
+<p>ncurses essentially gives you a grid systems of rows and columns. Within this basic grid, we can do simple things like move around and print characters but, as we&rsquo;ll see, also introduce more additional structures. As with many similar programs, the top left corner of the screen is (0,0) rather than the bottom left as is conventional elsewhere. What is rather more unique is that throughout ncurses where coordinate arguments are used, the &ldquo;y&rdquo; is specified before the &ldquo;x.&rdquo; A few functions!</p>
+
+<p><code>move(int y,int x)</code> &ndash; Allows us to move the cursor to a specified location on the screen. Note that if we hide the cursor (call <code>curs_set(0)</code>), this doesn&rsquo;t produce any externally-observable change</p>
+
+<h2 id="windows">Windows</h2>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="footer">
+    <div class="container">
+        <div class="copyright">
+
+        
+            <a href="https://mtn.github.io/license">Copyright © 2017 Michael Noronha</a>
+        
+
+        </div>
+        <div class="icons">
+
+        
+            <a href="https://github.com/mtn" target="_blank">
+                <i class="icon ion-social-github" title="github"></i>
+            </a>
+        
+
+        
+
+        
+            <a href="https://www.linkedin.com/in/mnoronha" target="_blank">
+                <i class="icon ion-social-linkedin" title="linkedin"></i>
+            </a>
+        
+
+        
+            <a href="mailto:mnoronha@uchicago.edu">
+                <i class="icon ion-ios-email larger" title="email"></i>
+            </a>
+        
+
+        
+            <a href="https://mtn.github.io/index.xml">
+                <i class="icon ion-social-rss larger" title="rss"></i>
+            </a>
+        
+
+        </div>
+    </div>
+</section>
+
+
+  <script src="https://mtn.github.io/js/highlight.min.js" defer></script>
+  
+
+
+
+  <script src="https://mtn.github.io/js/progressively.min.js" defer></script>
+
+
+<script>
+  window.onload = function() {
+    
+      hljs.initHighlighting();
+    
+    
+      progressively.init({delay: 30, throttle: 50});
+    
+  };
+</script>
+
+</body>
+</html>
+
