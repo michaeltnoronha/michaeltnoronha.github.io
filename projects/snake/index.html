@@ -2,7 +2,6 @@
 <html lang="en-US">
 
 <head>
-	<meta name="generator" content="Hugo 0.19" />
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="chrome=1">
 <meta name="HandheldFriendly" content="True">
@@ -12,20 +11,20 @@
 <meta name="description" content="Blog and personal website">
 
 
-<meta property="twitter:title" content="mtn">
+<meta property="twitter:title" content="Snake with ncurses">
 
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:image" content="https://mtn.github.io/img/banner.png">
 
-<meta property="twitter:description" content="Blog and personal website">
+<meta property="twitter:description" content="">
 
 <title>
 
 
-    mtn
+     mtn - Snake with ncurses 
 
 </title>
-<link rel="canonical" href="https://mtn.github.io/">
+<link rel="canonical" href="https://mtn.github.io/projects/snake/">
 
 
 <link rel="stylesheet" href="https://mtn.github.io/css/main.v0.9.1.css">
@@ -50,8 +49,6 @@
 
 
 
-  <link href="https://mtn.github.io/index.xml" rel="alternate" type="application/rss+xml" title="mtn" />
-
 
 </head>
 
@@ -59,7 +56,7 @@
 <body>
 
 
-<section class="header header-home">
+<section class="header">
 
     <div class="container">
         <a href="https://mtn.github.io/"><img class="logo" src="https://mtn.github.io/img/logo.png" alt="logo" /></a>
@@ -97,13 +94,32 @@
 <section class="main">
     <div class="container">
         <div class="content">
-            
+            <div class="page-heading">
 
-            
+    Snake with ncurses
 
-            <div class="best-posts">
-            
-            
+</div>
+
+            <div class="markdown">
+                
+    
+    
+
+<h1 id="snake">Snake</h1>
+
+<p>A terminal implementation of snake built in C with <a href="https://www.gnu.org/software/ncurses/">GNU ncurses</a>. This was both my first graphical (sorta) application in C, and also my first game. It features multiple levels, with different rates of movement and score increases per food consumed. As far as I can tell, the rules I&rsquo;ve implemented are consistent with typical snake games.</p>
+
+<p>There were a few minor things I didn&rsquo;t love and would consider changing:</p>
+
+<ul>
+<li>I manipulated <code>halfdelay()</code> (combined with a timer) to get the behavior I wanted, but hard is still pretty easy. <code>halfdelay()</code> only takes integer inputs, so I&rsquo;d have to come up with a different solution to address this.</li>
+<li>Rows are taller than columns, so vertical movement is way faster. This wouldn&rsquo;t be a huge deal to fix with a different timing system.</li>
+<li>Diamonds might not be the best character for snake body?</li>
+</ul>
+
+<p><a href="https://github.com/mtn/snake">Repository</a></p>
+
+
             </div>
         </div>
     </div>
@@ -171,5 +187,4 @@
 
 </body>
 </html>
-
 
