@@ -980,17 +980,19 @@ margin-left: -4%;
     
     
 
-<h1 id="snake">Snake</h1>
-
-<p>A terminal implementation of snake built in C with <a href="https://www.gnu.org/software/ncurses/">GNU ncurses</a>. This was both my first graphical (sorta) application in C, and also my first game. It features multiple levels, with different rates of movement and score increases per food consumed. As far as I can tell, the rules I&rsquo;ve implemented are consistent with typical snake games.</p>
+<p>Snake is a terminal implementation of the classic game built in C with <a href="https://www.gnu.org/software/ncurses/">GNU ncurses</a>. This was both my first graphical application in C, and also my first game. It features multiple levels, with different rates of movement and score increases per food consumed. As far as I can tell, the rules I&rsquo;ve implemented are consistent with typical snake games.</p>
 
 <p>There were a few minor things I didn&rsquo;t love and would consider changing:</p>
 
 <ul>
 <li>I manipulated <code>halfdelay()</code> (combined with a timer) to get the behavior I wanted, but hard is still pretty easy. <code>halfdelay()</code> only takes integer inputs, so I&rsquo;d have to come up with a different solution to address this.</li>
 <li>Rows are taller than columns, so vertical movement is way faster. This wouldn&rsquo;t be a huge deal to fix with a different timing system.</li>
-<li>Diamonds might not be the best character for snake body?</li>
+<li>Diamonds might not have been the best character for snake body</li>
 </ul>
+
+<h2 id="demo">Demo</h2>
+
+<p><figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://mtn.github.io/img/snake_demo.gif" src="https://mtn.github.io/img/low/snake_demo.gif" alt="Snake Demo Gif" style="width: 500px;"/></p></figure>
 
 <p><a href="https://github.com/mtn/snake">Repository</a></p>
 

@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2017 Michael Noronha</copyright>
-    <lastBuildDate>Sat, 01 Apr 2017 00:08:49 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 23 Jul 2017 17:17:59 -0400</lastBuildDate>
     
 	<atom:link href="https://mtn.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Omega Transmission</title>
+      <link>https://mtn.github.io/projects/omega-transmission/</link>
+      <pubDate>Sun, 23 Jul 2017 17:17:59 -0400</pubDate>
+      
+      <guid>https://mtn.github.io/projects/omega-transmission/</guid>
+      <description>Omega Transmission is a browser-based space shooter that I worked on with a team as a part of Gamkedo Club. It includes a series of increasingly challenging waves with a variety of enemy types. Like other games of the genre, the controls are intuitive and easily picked up, but difficulty ramps up quickly.
+As a team member I contributed to code and art:
+ Added the fleet enemy type and built upon existing assets to produce its sprite.</description>
+    </item>
     
     <item>
       <title>Home</title>
@@ -36,7 +47,7 @@
       <pubDate>Mon, 27 Mar 2017 17:21:16 -0500</pubDate>
       
       <guid>https://mtn.github.io/projects/snake/</guid>
-      <description>Snake A terminal implementation of snake built in C with GNU ncurses. This was both my first graphical (sorta) application in C, and also my first game. It features multiple levels, with different rates of movement and score increases per food consumed. As far as I can tell, the rules I&amp;rsquo;ve implemented are consistent with typical snake games.
+      <description>Snake is a terminal implementation of the classic game built in C with GNU ncurses. This was both my first graphical application in C, and also my first game. It features multiple levels, with different rates of movement and score increases per food consumed. As far as I can tell, the rules I&amp;rsquo;ve implemented are consistent with typical snake games.
 There were a few minor things I didn&amp;rsquo;t love and would consider changing:</description>
     </item>
     
