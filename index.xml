@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2017 Michael Noronha</copyright>
-    <lastBuildDate>Sun, 23 Jul 2017 17:17:59 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 30 Jul 2017 21:24:18 -0400</lastBuildDate>
     
 	<atom:link href="https://mtn.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Losing Power</title>
+      <link>https://mtn.github.io/projects/losing-power/</link>
+      <pubDate>Sun, 30 Jul 2017 21:24:18 -0400</pubDate>
+      
+      <guid>https://mtn.github.io/projects/losing-power/</guid>
+      <description>Made for Ludum Dare in 36 hours in July 2017 with Zach Caceres and Nero Gao. The theme was &amp;ldquo;running out of power.&amp;rdquo; In a blacked out zombie-infested city with flickering streetlights, players must find batteries to keep their flashlight shining – or else.
+Repository</description>
+    </item>
     
     <item>
       <title>Omega Transmission</title>

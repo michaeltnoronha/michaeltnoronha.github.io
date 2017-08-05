@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Game on mtn</title>
+    <link>https://mtn.github.io/tags/game/</link>
+    <description>Recent content in Game on mtn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright © 2017 Michael Noronha</copyright>
+    <lastBuildDate>Sun, 30 Jul 2017 21:24:18 -0400</lastBuildDate>
+    
+	<atom:link href="https://mtn.github.io/tags/game/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Losing Power</title>
+      <link>https://mtn.github.io/projects/losing-power/</link>
+      <pubDate>Sun, 30 Jul 2017 21:24:18 -0400</pubDate>
+      
+      <guid>https://mtn.github.io/projects/losing-power/</guid>
+      <description>Made for Ludum Dare in 36 hours in July 2017 with Zach Caceres and Nero Gao. The theme was &amp;ldquo;running out of power.&amp;rdquo; In a blacked out zombie-infested city with flickering streetlights, players must find batteries to keep their flashlight shining – or else.
+Repository</description>
+    </item>
+    
+  </channel>
+</rss>
