@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web on mtn</title>
+    <link>https://mtn.github.io/tags/web/</link>
+    <description>Recent content in Web on mtn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright © 2017 Michael Noronha</copyright>
+    <lastBuildDate>Thu, 05 Jan 2017 23:23:27 -0400</lastBuildDate>
+    
+	<atom:link href="https://mtn.github.io/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Multi User Blog</title>
+      <link>https://mtn.github.io/projects/multi-user-blog/</link>
+      <pubDate>Thu, 05 Jan 2017 23:23:27 -0400</pubDate>
+      
+      <guid>https://mtn.github.io/projects/multi-user-blog/</guid>
+      <description>Multi-user blog is a simple Medium-style blog I made to learn more about the Google App Engine. It uses Share Bootstrap&amp;rsquo;s free Clean Blog Theme, with a backend written in Python.
+Features:  Secure sign-in Comments on posts Liking posts/comments (but not your own) Users can edit their own posts  Live Demo
+Repository</description>
+    </item>
+    
+  </channel>
+</rss>
