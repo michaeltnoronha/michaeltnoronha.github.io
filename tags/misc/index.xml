@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Misc on mtn</title>
+    <link>https://mtn.github.io/tags/misc/</link>
+    <description>Recent content in Misc on mtn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 14 Aug 2018 21:01:05 -0700</lastBuildDate>
+    
+	<atom:link href="https://mtn.github.io/tags/misc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hello world!</title>
+      <link>https://mtn.github.io/blog/hello_world/</link>
+      <pubDate>Tue, 14 Aug 2018 21:01:05 -0700</pubDate>
+      
+      <guid>https://mtn.github.io/blog/hello_world/</guid>
+      <description>hi there</description>
+    </item>
+    
+  </channel>
+</rss>

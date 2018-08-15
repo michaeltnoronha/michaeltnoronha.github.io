@@ -14,8 +14,8 @@
 <meta property="og:locale" content="nn_NO" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mtn.github.io/about/" />
-<meta property="og:title" content="about" />
-<meta property="twitter:title" content="about">
+<meta property="og:title" content="About Me" />
+<meta property="twitter:title" content="About Me">
 
     <meta property="og:image" content="https://mtn.github.io/img/banner.png">
     <meta property="twitter:card" content="summary_large_image">
@@ -27,7 +27,7 @@
 <title>
 
 
-     mtn - about 
+     mtn - About Me 
 
 </title>
 <link rel="canonical" href="https://mtn.github.io/about/">
@@ -201,12 +201,15 @@ div.header .name {
   font-size: 28px;
   font-family: 'Nexa Bold', 'Helvetica Neue', 'Arial', sans-serif;
   letter-spacing: -0.005rem;
-  text-transform: uppercase;
+  
+      
+  text-transform: lowercase;
+      
+  
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   color: #333333;
-  color: #555555;
 }
 div.header nav {
   margin-bottom: 16px;
@@ -790,8 +793,6 @@ max-width: 750px;
 }
 div.column {
 padding: 0 16px;
-margin-left: 100px;
-margin-right: 100px;
 max-width: 750px;
 }
 div.header {
@@ -968,11 +969,9 @@ margin-left: -4%;
 
 
 
-
-
 <link rel="shortcut icon"
 
-    href="https://mtn.github.io/img/logo.png"
+    href="https://mtn.github.io/img/favicon.ico"
 
 >
 
@@ -985,10 +984,12 @@ margin-left: -4%;
 <body>
 
 
-<div class="header column">
+<div class="header header-home column">
 
     <div class="container">
-        <a href="https://mtn.github.io/"><img class="logo" src="https://mtn.github.io/img/logo.png" alt="logo" /></a>
+        
+        <a href="https://mtn.github.io/"><img class="logo" src="https://mtn.github.io/img/logo.jpg" alt="logo"></a>
+        
         <div class="content">
             <a href="https://mtn.github.io/"><div class="name"><h1>mtn</h1></div></a>
             <nav>
@@ -997,15 +998,13 @@ margin-left: -4%;
                     
                         
                             
-                            <li><a href="https://mtn.github.io/projects">projects</a></li>
-                            
                         
                     
                     
                         
                     
                         
-                            <li><a href="https://mtn.github.io/about/">about</a></li>
+                            <li><a href="https://mtn.github.io/about/">About Me</a></li>
                         
                     
                 </ul>
@@ -1014,19 +1013,21 @@ margin-left: -4%;
     </div>
 </div>
 
+
+
 <div class="main column">
     <div class="container">
         <div class="content">
             <div class="page-heading">
 
-    about
+    About Me
 
 </div>
 
             <div class="markdown">
                 
     
-    <p>Hi, I&rsquo;m Michael. I like computer science, philosophy, math, and music. I&rsquo;m also interested in behavioral science.</p>
+    <p>Hi, I&rsquo;m Michael. I like computer science, math, music, and philosophy. I&rsquo;m also interested in behavioral science.</p>
 
 <p>I study math and computer science at <a href="https://www.uchicago.edu/">UChicago</a>. This past summer, I spent three wonderful months at <a href="https://www.recurse.com">RC</a>.</p>
 
@@ -1035,9 +1036,19 @@ margin-left: -4%;
         </div>
     </div>
 </div>
+
+
+
 <div class="footer column">
     <div class="container">
 
+        
+            <div class="copyright">
+            
+            
+                <a href="https://github.com/mtn/hugo-super/tree/master/content/about.md" target="_blank">View this post on GitHub</a>
+            
+            </div>
         
 
         <div class="copyright">
@@ -1054,6 +1065,16 @@ margin-left: -4%;
         
 
         
+            <a href="https://gitlab.com/mtn1" target="_blank">
+                <img class="icon" src="https://mtn.github.io/img/gitlab.svg" alt="gitlab" />
+            </a>
+        
+
+        
+
+        
+
+        
             <a href="https://github.com/mtn" target="_blank">
                 <img class="icon" src="https://mtn.github.io/img/github.svg" alt="github" />
             </a>
@@ -1064,6 +1085,12 @@ margin-left: -4%;
         
             <a href="https://www.linkedin.com/in/mnoronha" target="_blank">
                 <img class="icon" src="https://mtn.github.io/img/linkedin.svg" alt="linkedin" />
+            </a>
+        
+
+        
+            <a href="https://keybase.io/mnoronha" target="_blank">
+                <img class="icon" src="https://mtn.github.io/img/keybase.svg" alt="keybase" />
             </a>
         
 
@@ -1110,14 +1137,6 @@ margin-left: -4%;
 
 
 <script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-96604723-1', 'auto');
-ga('send', 'pageview');
-</script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
-
-
-<script>
   window.onload = function() {
     
       hljs.initHighlighting();
@@ -1129,6 +1148,11 @@ ga('send', 'pageview');
   };
 </script>
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+</script>
+<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script>
 
 
 

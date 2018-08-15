@@ -6,41 +6,18 @@
     <description>Recent content on mtn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <copyright>Copyright © 2017 Michael Noronha</copyright>
-    <lastBuildDate>Mon, 21 Aug 2017 20:36:05 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 14 Aug 2018 21:01:05 -0700</lastBuildDate>
     
 	<atom:link href="https://mtn.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>RCade Falldown</title>
-      <link>https://mtn.github.io/projects/rcade-falldown/</link>
-      <pubDate>Mon, 21 Aug 2017 20:36:05 -0400</pubDate>
+      <title>Hello world!</title>
+      <link>https://mtn.github.io/blog/hello_world/</link>
+      <pubDate>Tue, 14 Aug 2018 21:01:05 -0700</pubDate>
       
-      <guid>https://mtn.github.io/projects/rcade-falldown/</guid>
-      <description>Welcome to the RCade! Don&amp;rsquo;t get pinned against the top. Built in python3 with graphics using py-sdl2.
-Repository</description>
-    </item>
-    
-    <item>
-      <title>Losing Power</title>
-      <link>https://mtn.github.io/projects/losing-power/</link>
-      <pubDate>Sun, 30 Jul 2017 21:24:18 -0400</pubDate>
-      
-      <guid>https://mtn.github.io/projects/losing-power/</guid>
-      <description>Made for Ludum Dare in 36 hours in July 2017 with Zach Caceres and Nero Gao. The theme was &amp;ldquo;running out of power.&amp;rdquo; In a blacked out zombie-infested city with flickering streetlights, players must find batteries to keep their flashlight shining – or else.
-Repository</description>
-    </item>
-    
-    <item>
-      <title>Omega Transmission</title>
-      <link>https://mtn.github.io/projects/omega-transmission/</link>
-      <pubDate>Sun, 23 Jul 2017 17:17:59 -0400</pubDate>
-      
-      <guid>https://mtn.github.io/projects/omega-transmission/</guid>
-      <description>Omega Transmission is a browser-based space shooter that I worked on with a team as a part of Gamkedo Club. It includes a series of increasingly challenging waves with a variety of enemy types. Like other games of the genre, the controls are intuitive and easily picked up, but difficulty ramps up quickly.
-As a team member I contributed to code and art:
- Added the fleet enemy type and built upon existing assets to produce its sprite.</description>
+      <guid>https://mtn.github.io/blog/hello_world/</guid>
+      <description>hi there</description>
     </item>
     
     <item>
@@ -53,43 +30,13 @@ As a team member I contributed to code and art:
     </item>
     
     <item>
-      <title>Projects</title>
-      <link>https://mtn.github.io/projects/projects/</link>
-      <pubDate>Fri, 31 Mar 2017 17:16:25 -0500</pubDate>
-      
-      <guid>https://mtn.github.io/projects/projects/</guid>
-      <description>Some of the personal projects I&amp;rsquo;ve worked on with accompanying descriptions.</description>
-    </item>
-    
-    <item>
-      <title>Snake with ncurses</title>
-      <link>https://mtn.github.io/projects/snake/</link>
-      <pubDate>Mon, 27 Mar 2017 17:21:16 -0500</pubDate>
-      
-      <guid>https://mtn.github.io/projects/snake/</guid>
-      <description>Snake is a terminal implementation of the classic game built in C with GNU ncurses. This was both my first graphical application in C, and also my first game. It features multiple levels, with different rates of movement and score increases per food consumed. As far as I can tell, the rules I&amp;rsquo;ve implemented are consistent with typical snake games.
-There were a few minor things I didn&amp;rsquo;t love and would consider changing:</description>
-    </item>
-    
-    <item>
-      <title>about</title>
+      <title>About Me</title>
       <link>https://mtn.github.io/about/</link>
       <pubDate>Wed, 22 Mar 2017 00:38:03 -0500</pubDate>
       
       <guid>https://mtn.github.io/about/</guid>
-      <description>Hi, I&amp;rsquo;m Michael. I like computer science, philosophy, math, and music. I&amp;rsquo;m also interested in behavioral science.
+      <description>Hi, I&amp;rsquo;m Michael. I like computer science, math, music, and philosophy. I&amp;rsquo;m also interested in behavioral science.
 I study math and computer science at UChicago. This past summer, I spent three wonderful months at RC.</description>
-    </item>
-    
-    <item>
-      <title>Multi User Blog</title>
-      <link>https://mtn.github.io/projects/multi-user-blog/</link>
-      <pubDate>Thu, 05 Jan 2017 23:23:27 -0400</pubDate>
-      
-      <guid>https://mtn.github.io/projects/multi-user-blog/</guid>
-      <description>Multi-user blog is a simple Medium-style blog I made to learn more about the Google App Engine. It uses Share Bootstrap&amp;rsquo;s free Clean Blog Theme, with a backend written in Python.
-Features:  Secure sign-in Comments on posts Liking posts/comments (but not your own) Users can edit their own posts  Live Demo
-Repository</description>
     </item>
     
   </channel>

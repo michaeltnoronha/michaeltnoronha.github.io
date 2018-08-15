@@ -2,7 +2,7 @@
 <html lang="en-US">
 
 <head>
-	<meta name="generator" content="Hugo 0.26" />
+	<meta name="generator" content="Hugo 0.42.1" />
 <meta charset="utf-8">
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
@@ -202,12 +202,15 @@ div.header .name {
   font-size: 28px;
   font-family: 'Nexa Bold', 'Helvetica Neue', 'Arial', sans-serif;
   letter-spacing: -0.005rem;
-  text-transform: uppercase;
+  
+      
+  text-transform: lowercase;
+      
+  
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   color: #333333;
-  color: #555555;
 }
 div.header nav {
   margin-bottom: 16px;
@@ -791,8 +794,6 @@ max-width: 750px;
 }
 div.column {
 padding: 0 16px;
-margin-left: 100px;
-margin-right: 100px;
 max-width: 750px;
 }
 div.header {
@@ -969,11 +970,9 @@ margin-left: -4%;
 
 
 
-
-
 <link rel="shortcut icon"
 
-    href="https://mtn.github.io/img/logo.png"
+    href="https://mtn.github.io/img/favicon.ico"
 
 >
 
@@ -991,7 +990,9 @@ margin-left: -4%;
 <div class="header header-home column">
 
     <div class="container">
-        <a href="https://mtn.github.io/"><img class="logo" src="https://mtn.github.io/img/logo.png" alt="logo" /></a>
+        
+        <a href="https://mtn.github.io/"><img class="logo" src="https://mtn.github.io/img/logo.jpg" alt="logo"></a>
+        
         <div class="content">
             <a href="https://mtn.github.io/"><div class="name"><h1>mtn</h1></div></a>
             <nav>
@@ -1000,15 +1001,13 @@ margin-left: -4%;
                     
                         
                             
-                            <li><a href="https://mtn.github.io/projects">projects</a></li>
-                            
                         
                     
                     
                         
                     
                         
-                            <li><a href="https://mtn.github.io/about/">about</a></li>
+                            <li><a href="https://mtn.github.io/about/">About Me</a></li>
                         
                     
                 </ul>
@@ -1031,6 +1030,22 @@ margin-left: -4%;
                 <div class="posts">
                 
                 
+                    <div class="page-heading">Latest posts</div>
+                    <ul>
+                    
+                        <li class="groupby">Aug, 2018</li>
+                        
+                            <li class="post-item">
+    <span class="meta">Aug 14, 2018</span>
+    <a href="https://mtn.github.io/blog/hello_world/"><span>Hello world!</span></a>
+</li>
+
+                        
+                    
+                    </ul>
+
+                    
+                
                 </div>
             
 
@@ -1044,6 +1059,13 @@ margin-left: -4%;
 <div class="footer column">
     <div class="container">
 
+        
+            <div class="copyright">
+            
+            
+                <a href="https://github.com/mtn/hugo-super/tree/master/content/" target="_blank">View this post on GitHub</a>
+            
+            </div>
         
 
         <div class="copyright">
@@ -1060,6 +1082,16 @@ margin-left: -4%;
         
 
         
+            <a href="https://gitlab.com/mtn1" target="_blank">
+                <img class="icon" src="https://mtn.github.io/img/gitlab.svg" alt="gitlab" />
+            </a>
+        
+
+        
+
+        
+
+        
             <a href="https://github.com/mtn" target="_blank">
                 <img class="icon" src="https://mtn.github.io/img/github.svg" alt="github" />
             </a>
@@ -1070,6 +1102,12 @@ margin-left: -4%;
         
             <a href="https://www.linkedin.com/in/mnoronha" target="_blank">
                 <img class="icon" src="https://mtn.github.io/img/linkedin.svg" alt="linkedin" />
+            </a>
+        
+
+        
+            <a href="https://keybase.io/mnoronha" target="_blank">
+                <img class="icon" src="https://mtn.github.io/img/keybase.svg" alt="keybase" />
             </a>
         
 
@@ -1116,14 +1154,6 @@ margin-left: -4%;
 
 
 <script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-96604723-1', 'auto');
-ga('send', 'pageview');
-</script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
-
-
-<script>
   window.onload = function() {
     
       hljs.initHighlighting();
@@ -1135,6 +1165,11 @@ ga('send', 'pageview');
   };
 </script>
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+</script>
+<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script>
 
 
 
