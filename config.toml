@@ -9,6 +9,7 @@ publishdir = "docs"
 author = "Michael Noronha"
 title = "mtn"
 pluralizelisttitles = false
+googleAnalytics = "UA-96604723-1"
 
 [permalinks]
 posts = "posts/:filename/"
@@ -34,7 +35,6 @@ email = "mnoronha@uchicago.edu"
 linkedin = "mnoronha"
 social_banner = "img/banner.png"
 latestpostcount = 3
-googleanalytics = "UA-96604723-1"
 uselatex = true
 disablefancyfonts = false
 titlestyle = "lowercase"

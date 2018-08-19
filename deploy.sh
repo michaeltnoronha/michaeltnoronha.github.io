@@ -12,7 +12,7 @@ hugo
 # cp $resume .
 
 # Add changes to git.
-git add docs
+git add -u
 
 # Commit changes.
 msg="rebuilding site `date`"
