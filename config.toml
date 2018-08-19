@@ -1,4 +1,4 @@
-baseurl = "https://mtn.github.io/"
+baseurl = "https://mnoronha.com/"
 theme = "cocoa-eh"
 builddrafts = false
 canonifyurls = true
